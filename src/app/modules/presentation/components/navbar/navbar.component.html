@@ -1,4 +1,4 @@
-<mat-drawer-container class="lm-navbar__container" autosize>
+<mat-drawer-container class="lm-navbar__container" autosize role="navigation">
 	<mat-drawer
 		class="lm-navbar__drawer"
 		#drawer
@@ -25,14 +25,14 @@
 			</div>
 
 			<div>
-<!-- 				<app-user-profile-footer
+				<!-- 				<app-user-profile-footer
 					(click)="drawer.toggle()"
 				></app-user-profile-footer> -->
 			</div>
 		</div>
 	</mat-drawer>
 
-	<div class="lm-navbar__container--sticky">
+	<div class="lm-navbar__container--sticky" role="heading">
 		<div class="lm-navbar__title-section">
 			<mat-icon
 				class="lm-navbar__icon lm-navbar__item"
@@ -40,11 +40,11 @@
 				>menu</mat-icon
 			>
 			<span>
-<!-- 				<app-page-header-title>
+				<app-page-header-title>
 					<span class="lm-navbar__title" id="sectionTitle">
 						{{ _title }}
 					</span>
-				</app-page-header-title> -->
+				</app-page-header-title>
 			</span>
 		</div>
 

@@ -8,7 +8,7 @@ export interface Label {
 @Component({
 	selector: 'app-label',
 	templateUrl: './label.component.html',
-	styleUrls: ['./label.component.css']
+	styleUrls: ['./label.component.scss']
 })
 export class LabelComponent {
 	@Input() label: Label;

@@ -1,0 +1,124 @@
+:host {
+	--lm-top-navbar--color: var(--lm-main);
+	--lm-navbar--icon--color: var(--lm-white-color);
+	--lm-navbar--links: var(--lm-white-color);
+	--lm-navbar-drawer--links: var(--lm-black-color);
+	--lm-navbar--title: var(--lm-white-color);
+}
+.lm-navbar__title {
+	color: var(--lm-navbar--title);
+	font-weight: 600;
+	font-size: 16px;
+	margin-left: 16px;
+}
+
+.lm-navbar__container {
+	width: 100%;
+	height: 100%;
+}
+
+.lm-navbar__drawer {
+	height: 100%;
+}
+
+.lm-navbar__container--sticky {
+	.lm-navbar__links--desktop-view {
+		display: none;
+	}
+
+	height: 50px;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	background: var(--lm-top-navbar--color);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.lm-navbar__drawer-content {
+	padding: 16px;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.lm-navbar__isologo {
+	height: 35px;
+	width: 35px;
+}
+
+.lm-navbar__item {
+	padding: 8px;
+
+	&.lm-navbar__icon {
+		color: var(--lm-navbar--icon--color);
+	}
+}
+
+.lm-navbar__title-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lm-navbar__drawer-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	margin: 10px auto;
+
+	text-decoration: none;
+	margin: auto 16px;
+	font-weight: 600;
+	color: var(--lm-navbar-drawer--links);
+	&:visited {
+		color: var(--lm-navbar-drawer--links);
+	}
+	&--active {
+		background: #4f7cac;
+		transform: scale(1.1);
+		border-radius: 5px;
+		padding: 3px;
+	}
+}
+
+.lm-navbar__drawer-image {
+	height: 65px;
+	width: auto;
+	margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+	.lm-navbar__container--sticky {
+		.lm-navbar__title-section {
+			display: none;
+		}
+		.lm-navbar__links--desktop-view {
+			display: flex;
+			color: var(--lm-navbar--links);
+			font-weight: 600;
+			a {
+				text-decoration: none;
+				margin: auto 16px;
+			}
+			a:visited {
+				color: var(--lm-navbar--links);
+			}
+			a:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+
+.lm-content__container{
+	background: #d3d3d3;
+	min-height: 100vh;
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+	@Input() _title:string = 'Section Title'
 
-  constructor() { }
+	links= [
+		{link:'home', text:'Home'},
+		{link:'myprojects', text:'My Projects'},
+		{link: 'mystories', text: 'My Stories'},
+		{link: 'settings', text: 'Settings'}
+	]
 
-  ngOnInit(): void {
-  }
+	constructor(private router:Router) {}
 
+	test(valor:string):void{
+		this.router.navigate([`${valor}`])
+	}
+
+	ngOnInit(): void {}
 }

@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material/material.module';
+import { NavbarComponent } from './modules/presentation/components/navbar/navbar.component';
 import { PresentationModule } from './modules/presentation/presentation.module';
 
 
@@ -16,7 +17,8 @@ registerLocaleData(localeEsAr, 'es-AR');
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		NavbarComponent
 	],
 	imports: [
 		AppRoutingModule,

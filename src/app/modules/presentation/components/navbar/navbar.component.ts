@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
 	links = [
 		{ link: 'home', text: 'Home' },
-		{ link: 'myprojects', text: 'My Projects' },
+		{ link: 'my-projects', text: 'My Projects' },
 		{ link: 'mystories', text: 'My Stories' },
 		{ link: 'settings', text: 'Settings' },
 	];

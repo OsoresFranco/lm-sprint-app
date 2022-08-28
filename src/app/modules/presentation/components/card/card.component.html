@@ -1,1 +1,13 @@
-<p>card works!</p>
+<mat-card class="card__container">
+	<mat-card-title>
+		{{ card.name }}
+		{{ card.icon }}
+	</mat-card-title>
+	<mat-card-subtitle>Identifier: {{ card._id }}</mat-card-subtitle>
+	<div>
+		{{ card.description }}
+	</div>
+	<mat-card-actions>
+		<button mat-button>LIKE</button>
+	</mat-card-actions>
+</mat-card>

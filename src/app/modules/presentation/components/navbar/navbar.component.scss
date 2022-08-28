@@ -1,5 +1,7 @@
+@import "../../../../../assets/styles/theme.scss";
+
 :host {
-	--lm-top-navbar--color: var(--lm-main);
+	--lm-top-navbar--color: var(--lm-primary);
 	--lm-navbar--icon--color: var(--lm-white-color);
 	--lm-navbar--links: var(--lm-white-color);
 	--lm-navbar-drawer--links: var(--lm-black-color);
@@ -22,19 +24,20 @@
 }
 
 .lm-navbar__container--sticky {
-	.lm-navbar__links--desktop-view {
-		display: none;
-	}
-
 	height: 50px;
 	width: 100%;
 	position: sticky;
 	top: 0;
 	background: var(--lm-top-navbar--color);
+	z-index: 10;
 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	.lm-navbar__links--desktop-view {
+		display: none;
+	}
 }
 
 .lm-navbar__drawer-content {
@@ -117,8 +120,7 @@
 	}
 }
 
-
-.lm-content__container{
+.lm-content__container {
 	background: #d3d3d3;
 	min-height: 100vh;
 }

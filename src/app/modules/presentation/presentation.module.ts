@@ -9,6 +9,7 @@ import { PageHeaderTitleComponent } from './components/page-header-title/page-he
 import { HomeComponent } from './routes/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserProfileFooterComponent } from './components/user-profile-footer/user-profile-footer.component';
+import { MyProjectsComponent } from './routes/my-projects/my-projects.component';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { UserProfileFooterComponent } from './components/user-profile-footer/use
 		HomeComponent,
 		NavbarComponent,
 		UserProfileFooterComponent,
+		MyProjectsComponent,
 	],
 	imports: [CommonModule, FlexLayoutModule, MaterialModule, RouterModule],
 	exports: [FlexLayoutModule, NavbarComponent],

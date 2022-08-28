@@ -1,0 +1,14 @@
+.user-profile__container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.user-profile__name{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.user-profile__item{
+    margin: auto 5px;
+}

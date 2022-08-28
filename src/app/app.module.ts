@@ -11,13 +11,10 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material/material.module';
 import { PresentationModule } from './modules/presentation/presentation.module';
 
-
 registerLocaleData(localeEsAr, 'es-AR');
 
 @NgModule({
-	declarations: [
-		AppComponent
-	],
+	declarations: [AppComponent],
 	imports: [
 		AppRoutingModule,
 		BrowserModule,
@@ -27,16 +24,14 @@ registerLocaleData(localeEsAr, 'es-AR');
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
-				useFactory: (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json'),
-				deps: [HttpClient]
-			}
+				useFactory: (http: HttpClient) =>
+					new TranslateHttpLoader(http, './assets/i18n/', '.json'),
+				deps: [HttpClient],
+			},
 		}),
 		PresentationModule,
 	],
-	providers: [
-		{ provide: LOCALE_ID, useValue: 'es-AR' }
-	],
-	bootstrap: [AppComponent]
+	providers: [{ provide: LOCALE_ID, useValue: 'es-AR' }],
+	bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

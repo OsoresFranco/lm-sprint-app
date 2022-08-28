@@ -6,14 +6,18 @@ const DEFAULT_LANG = 'es-AR';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+	sectionTitle: string = '';
 
-	currentYear = new Date().getFullYear()
-
-	constructor(translate: TranslateService) {
-		translate.setDefaultLang(DEFAULT_LANG)
+	subscribeToEmitter(event: string) {
+		this.sectionTitle = event;
 	}
 
+	currentYear = new Date().getFullYear();
+
+	constructor(translate: TranslateService) {
+		translate.setDefaultLang(DEFAULT_LANG);
+	}
 }

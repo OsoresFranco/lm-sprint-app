@@ -24,6 +24,6 @@
 
 <ng-template #content>
 	<div class="project-card" *ngFor="let task of tasks">
-		<app-task-card [task]="task"> </app-task-card>
+		<app-task-card (delete)="deleteTask($event)" [task]="task"> </app-task-card>
 	</div>
 </ng-template>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Tasks } from 'src/app/modules/core/models/Tasks';
 
 @Component({
@@ -7,13 +7,18 @@ import { Tasks } from 'src/app/modules/core/models/Tasks';
 	styleUrls: ['./task-card.component.scss'],
 })
 export class TaskCardComponent implements OnInit {
-	@Input() task:Tasks;
+	@Output() delete = new EventEmitter();
+
+	@Input() task: Tasks;
 	isChecked: boolean;
 
 	check() {
 		this.isChecked = !this.isChecked;
 	}
-  
+
+	deleteEmit(event: Tasks) {
+		this.delete.emit(event);
+	}
 
 	constructor() {}
 

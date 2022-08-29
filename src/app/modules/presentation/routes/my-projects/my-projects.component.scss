@@ -1,3 +1,9 @@
+@import "../../../../../assets/styles/theme.scss";
+
+:host {
+	--lm--my-projects-text: var(--lm-black-color);
+}
+
 .project-card {
 	margin: 15px;
 }
@@ -13,6 +19,14 @@
 @media only screen and (min-width: 768px) {
 	.project-card__container {
 		flex-direction: row;
-        flex-wrap: wrap;
+		flex-wrap: wrap;
 	}
+}
+
+.project-card__content--empty {
+	font-weight: 600;
+	margin-top: 25px;
+	max-width: 50%;
+	text-align: center;
+	color: var(--lm--my-projects-text);
 }

@@ -1,3 +1,15 @@
-<div>
-	<app-card></app-card>
+<div class="project-card__container">
+	<ng-container *ngIf="cards.length; else elseBlock">
+		<ng-container *ngTemplateOutlet="content"> </ng-container>
+	</ng-container>
+
+	<ng-template #elseBlock>
+		<p></p>
+	</ng-template>
 </div>
+
+<ng-template #content>
+	<div class="project-card" *ngFor="let card of cards">
+		<app-card cardType="project" [card]="card"> </app-card>
+	</div>
+</ng-template>

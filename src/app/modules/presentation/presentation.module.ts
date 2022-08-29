@@ -10,6 +10,7 @@ import { HomeComponent } from './routes/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserProfileFooterComponent } from './components/user-profile-footer/user-profile-footer.component';
 import { MyProjectsComponent } from './routes/my-projects/my-projects.component';
+import { CardDialogComponent } from './components/card-dialog/card-dialog.component';
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { MyProjectsComponent } from './routes/my-projects/my-projects.component'
 		NavbarComponent,
 		UserProfileFooterComponent,
 		MyProjectsComponent,
+		CardDialogComponent,
 	],
 	imports: [CommonModule, FlexLayoutModule, MaterialModule, RouterModule],
 	exports: [FlexLayoutModule, NavbarComponent],

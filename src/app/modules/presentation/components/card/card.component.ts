@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Epics } from 'src/app/modules/core/models/Epics';
 import { Projects } from 'src/app/modules/core/models/Projects';
+import { CardDialogComponent } from '../card-dialog/card-dialog.component';
 
 const cardType = {
 	project: ['card__container--project'],
@@ -21,27 +22,16 @@ export class CardComponent implements OnInit {
 	}
 	_cardType = 'card__container--project';
 
-	/* 	@Input() card: Projects | Epics; */
-	card: Projects = {
-		members: [],
-		_id: 'hasuid767a8sd6a',
-		id: 12,
-		name: 'App Aeronautica Estatal',
-		description:
-			'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
-		icon: '🌎',
-		__v: 14,
-	};
+	@Input() card: Projects | Epics;
 
 	@Input() dialogButton: boolean = true;
 
-	/* 
 	openDialog(cardInfo: Projects | Epics) {
 		this.dialog.open(CardDialogComponent, {
 			data: cardInfo,
 			maxWidth: '90',
 		});
-	} */
+	}
 
 	ngOnInit(): void {}
 }

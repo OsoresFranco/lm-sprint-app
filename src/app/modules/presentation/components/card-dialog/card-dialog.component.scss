@@ -1,0 +1,24 @@
+@import "../../../../../assets/styles/theme.scss";
+:host {
+	--lm-dialog-background: var(--lm-background);
+	--lm-dialog-button: var(--lm-primary);
+}
+
+.dialog__epic {
+	margin: 20px auto;
+}
+
+.dialog__button-container {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 15px;
+}
+
+.dialog__content-window {
+	background-color: var(--lm-dialog-background);
+}
+
+.dialog__button {
+	background: var(--lm-dialog-button);
+	color: var(--lm-white-color);
+}

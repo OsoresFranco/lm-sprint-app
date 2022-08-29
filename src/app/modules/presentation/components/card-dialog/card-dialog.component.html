@@ -1,0 +1,16 @@
+<div matDialogTitle class="dialog__title">
+	<span>{{ data.name }}</span>
+	<span>Epics</span>
+</div>
+<mat-dialog-content class="dialog__content-window">
+	<div class="dialog__container">
+		<div class="dialog__epic-container">
+			<div class="dialog__epic" *ngFor="let card of epics">
+				<app-card [dialogButton]="false" cardType="epic" [card]="card"></app-card>
+			</div>
+		</div>
+	</div>
+</mat-dialog-content>
+<div class="dialog__button-container">
+	<button class="dialog__button" mat-raised-button mat-dialog-close>Cancel</button>
+</div>

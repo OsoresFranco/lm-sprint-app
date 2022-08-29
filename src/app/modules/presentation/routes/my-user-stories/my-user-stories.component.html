@@ -1,3 +1,15 @@
-<div>
-	<app-user-stories-card></app-user-stories-card>
+<div class="stories-card__container">
+	<ng-container *ngIf="cards.length; else elseBlock">
+		<ng-container *ngTemplateOutlet="content"> </ng-container>
+	</ng-container>
+
+	<ng-template #elseBlock>
+		<h3 class="stories-card__content--empty">There are no projects assigned to you yet.</h3>
+	</ng-template>
 </div>
+
+<ng-template #content>
+	<div class="stories-card" *ngFor="let card of cards">
+		<app-user-stories-card [userStory]="card"></app-user-stories-card>
+	</div>
+</ng-template>

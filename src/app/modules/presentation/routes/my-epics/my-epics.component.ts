@@ -13,7 +13,6 @@ export class MyEpicsComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.url = this.route.snapshot.url.join('/');
-		console.log(this.route.snapshot.url.join('/'))
 	}
 
 	title: string = 'Epics';

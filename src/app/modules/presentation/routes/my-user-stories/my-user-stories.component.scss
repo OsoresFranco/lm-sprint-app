@@ -1,6 +1,32 @@
-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+@import "../../../../../assets/styles/theme.scss";
+
+:host {
+	--lm--my-projects-text: var(--lm-black-color);
+}
+
+.stories-card {
+	margin: 15px;
+}
+
+.stories-card__container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+	.stories-card__container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.stories-card__content--empty {
+	font-weight: 600;
+	margin-top: 25px;
+	max-width: 50%;
+	text-align: center;
+	color: var(--lm--my-projects-text);
 }

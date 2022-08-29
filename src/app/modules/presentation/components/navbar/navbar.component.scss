@@ -46,7 +46,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .lm-navbar__isologo {
@@ -123,4 +123,8 @@
 .lm-content__container {
 	background: #d3d3d3;
 	min-height: 100vh;
+}
+
+.lm-navbar__side-drawer-item{
+	margin: 45px auto;
 }

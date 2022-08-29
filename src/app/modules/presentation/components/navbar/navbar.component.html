@@ -16,7 +16,7 @@
 			<div>
 				<a
 					*ngFor="let item of links"
-					class="lm-navbar__drawer-item"
+					class="lm-navbar__drawer-item lm-navbar__side-drawer-item"
 					(click)="drawer.toggle()"
 					routerLink="{{ item.link }}"
 					[routerLinkActive]="'lm-navbar__drawer-item--active'"

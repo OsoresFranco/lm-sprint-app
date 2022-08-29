@@ -13,6 +13,7 @@ import { MyProjectsComponent } from './routes/my-projects/my-projects.component'
 import { CardDialogComponent } from './components/card-dialog/card-dialog.component';
 import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
+import { UserStoriesComponent } from './components/user-stories/user-stories.component';
 
 @NgModule({
 	declarations: [
@@ -26,6 +27,7 @@ import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
 		CardDialogComponent,
 		ProgressSpinnerComponent,
 		MyEpicsComponent,
+		UserStoriesComponent,
 	],
 	imports: [CommonModule, FlexLayoutModule, MaterialModule, RouterModule],
 	exports: [FlexLayoutModule, NavbarComponent, ProgressSpinnerComponent],

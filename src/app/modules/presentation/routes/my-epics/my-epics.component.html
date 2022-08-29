@@ -1,1 +1,17 @@
-<p>my-epics works!</p>
+<div class="epic-card__container">
+	<ng-container *ngIf="epics.length; else elseBlock">
+		<ng-container *ngTemplateOutlet="content"> </ng-container>
+	</ng-container>
+
+	<ng-template #elseBlock>
+		<h3 class="epic-card__content--empty">
+			There are no Epics for this project yet.
+		</h3>
+	</ng-template>
+</div>
+
+<ng-template #content>
+	<div class="epic-card" *ngFor="let card of epics">
+		<app-card cardType="epic" [card]="card"> </app-card>
+	</div>
+</ng-template>

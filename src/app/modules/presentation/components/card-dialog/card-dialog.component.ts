@@ -11,7 +11,7 @@ import { Projects } from 'src/app/modules/core/models/Projects';
 export class CardDialogComponent implements OnInit {
 	constructor(@Inject(MAT_DIALOG_DATA) public data: Epics | Projects) {}
 
-	epics: Epics[] = [
+	dataArray: Epics[] = [
 		{
 			_id: 'asdmkasjdkasd',
 			id: 5,

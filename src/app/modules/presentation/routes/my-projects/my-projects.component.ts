@@ -12,7 +12,7 @@ export class MyProjectsComponent implements OnInit {
 			members: [],
 			_id: 'hasuid767a8sd6a',
 			id: 12,
-			name: 'App Aeronautica Estatal',
+			name: 'App Aeronautica 1',
 			description:
 				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
 			icon: '🌎',
@@ -22,7 +22,7 @@ export class MyProjectsComponent implements OnInit {
 			members: [],
 			_id: 'hasuid767a8sd6a',
 			id: 12,
-			name: 'App Aeronautica Estatal',
+			name: 'App Aeronautica 2',
 			description:
 				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
 			icon: '🌎',
@@ -32,7 +32,7 @@ export class MyProjectsComponent implements OnInit {
 			members: [],
 			_id: 'hasuid767a8sd6a',
 			id: 12,
-			name: 'App Aeronautica Estatal',
+			name: 'App Aeronautica 3',
 			description:
 				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
 			icon: '🌎',
@@ -42,7 +42,7 @@ export class MyProjectsComponent implements OnInit {
 			members: [],
 			_id: 'hasuid767a8sd6a',
 			id: 12,
-			name: 'App Aeronautica Estatal',
+			name: 'A 4',
 			description:
 				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
 			icon: '🌎',

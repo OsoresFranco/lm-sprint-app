@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { StatusPipe } from './pipes/status.pipe';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+	declarations: [StatusPipe],
+	imports: [CommonModule],
+	exports: [StatusPipe],
 })
-export class CoreModule { }
+export class CoreModule {}

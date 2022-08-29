@@ -49,8 +49,9 @@ export class UserStoriesCardComponent implements OnInit {
 		status: 'todo',
 		_id: '620192ba5d34515ecc3adafa',
 		id: 45,
-		name: 'string',
-		description: 'string',
+		name: 'Crear pagina landing',
+		description:
+			'Esta es la descripcion de la user story esta, pero debe ser muy larga y por eso se va a mas de dos lineas',
 		epic: '62017253df85e917808d11f0',
 		created: '2022-02-07T21:44:26.346Z',
 		owner: 'No sé',

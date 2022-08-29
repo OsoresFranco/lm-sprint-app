@@ -3,8 +3,8 @@
 		{{ userStory.name }}
 	</mat-card-title>
 	<mat-card-subtitle>
-		Created: {{ userStory.created | date }}
-		Status: {{ userStory.status | date }}
+		<div>Created: {{ userStory.created | date }}</div>
+		<div>Status: {{ userStory.status | status }} | Points Value: {{userStory.points}}</div>
 	</mat-card-subtitle>
 	<div>{{ userStory.description }}</div>
 	<mat-card-actions class="card__actions-container">

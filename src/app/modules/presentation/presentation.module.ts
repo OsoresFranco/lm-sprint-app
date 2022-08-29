@@ -1,6 +1,7 @@
 import { MaterialModule } from './../material/material.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CoreModule } from '../core/core.module';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LabelComponent } from './components/label/label.component';
@@ -29,9 +30,15 @@ import { UserStoriesCardComponent } from './components/user-stories-card/user-st
 		ProgressSpinnerComponent,
 		MyEpicsComponent,
 		MyUserStoriesComponent,
-		UserStoriesCardComponent,
+		UserStoriesCardComponent
 	],
-	imports: [CommonModule, FlexLayoutModule, MaterialModule, RouterModule],
+	imports: [
+		CommonModule,
+		FlexLayoutModule,
+		MaterialModule,
+		RouterModule,
+		CoreModule
+	],
 	exports: [FlexLayoutModule, NavbarComponent, ProgressSpinnerComponent],
 })
 export class PresentationModule {}

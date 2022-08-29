@@ -1,6 +1,49 @@
-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+@import "../../../../../assets/styles/theme.scss";
+
+:host {
+	--lm--my-projects-text: var(--lm-black-color);
+	--lm-add-button: var(--lm-primary);
+}
+
+.project-card {
+	margin: 15px;
+}
+
+.project-card__container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+	.project-card__container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.project-card__content--empty {
+	font-weight: 600;
+	margin-top: 25px;
+	max-width: 50%;
+	text-align: center;
+	color: var(--lm--my-projects-text);
+}
+
+.header-task-create__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	h3 {
+		color: var(--lm--my-projects-text);
+		font-size: 20px;
+		font-weight: 600;
+		margin: 0px 15px;
+	}
+	button {
+		background-color: var(--lm-add-button);
+	}
 }

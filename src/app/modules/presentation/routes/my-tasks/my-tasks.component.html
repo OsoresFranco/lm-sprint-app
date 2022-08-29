@@ -1,3 +1,24 @@
-<div>
-    <app-task-card></app-task-card>
+<div class="header-task-create__container">
+	<h3>Add a task</h3>
+	<button class="header-task__button" mat-mini-fab aria-label="button with a add icon">
+		<mat-icon>library_add</mat-icon>
+	</button>
 </div>
+
+<div class="project-card__container">
+	<ng-container *ngIf="tasks.length; else elseBlock">
+		<ng-container *ngTemplateOutlet="content"> </ng-container>
+	</ng-container>
+
+	<ng-template #elseBlock>
+		<h3 class="project-card__content--empty">
+			There are no tasks for this Epic yet
+		</h3>
+	</ng-template>
+</div>
+
+<ng-template #content>
+	<div class="project-card" *ngFor="let task of tasks">
+		<app-task-card [task]="task"> </app-task-card>
+	</div>
+</ng-template>

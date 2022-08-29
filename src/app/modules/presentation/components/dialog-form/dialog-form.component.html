@@ -1,0 +1,40 @@
+<div class="dialog-form__title">
+	<h3>Create a new Task</h3>
+</div>
+<mat-dialog-content class="form-dialog__content">
+	<form [formGroup]="form" autocomplete="off">
+		<mat-form-field appearance="fill" class="form-dialog__input">
+			<mat-label>Task Name</mat-label>
+			<mat-icon matPrefix>mode_edit</mat-icon>
+			<input
+				type="text"
+				formControlName="name"
+				matInput
+				placeholder="Ex. Task #1"
+			/>
+			<mat-error *ngIf="form.get('name').invalid"
+				>Name is Required</mat-error
+			>
+		</mat-form-field>
+
+		<mat-form-field appearance="fill" class="form-dialog__input">
+			<mat-label>Task Description</mat-label>
+			<mat-icon matPrefix>list_alt</mat-icon>
+			<input
+				type="text"
+				formControlName="description"
+				matInput
+				placeholder="Ex. Create landing page"
+			/>
+			<mat-error *ngIf="form.get('description').invalid"
+				>Min. 10 Characters required</mat-error
+			>
+		</mat-form-field>
+	</form>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-form__actions-container">
+	<button class="dialog-form__button dialog-form__button--submit" mat-raised-button [disabled]="form.invalid" (click)="test()">
+		Submit
+	</button>
+	<button class="dialog-form__button dialog-form__button--cancel" mat-raised-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

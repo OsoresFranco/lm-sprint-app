@@ -1,0 +1,45 @@
+@import "../../../../../assets/styles/theme.scss";
+:host {
+	--lm-dialog-title: var(--lm-black-color);
+	--lm-backgorund-color: var(--lm-background);
+	--lm-button-submit: var(--lm-primary);
+	--lm-button-cancel: var(--lm-tertiary);
+	--lm-button-text: var(--lm-white-color);
+}
+
+.dialog-form__actions-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.dialog-form__title {
+	h3 {
+		font-weight: 600;
+		font-size: 20px;
+		color: var(--lm-dialog-title);
+	}
+}
+
+.form-dialog__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+	background: var(--lm-backgorund-color);
+}
+
+.form-dialog__input {
+	width: 100%;
+}
+
+.dialog-form__button {
+	color: var(--lm-button-text);
+	&--submit {
+		background-color: var(--lm-button-submit);
+	}
+	&--cancel {
+		background-color: var(--lm-button-cancel);
+	}
+}

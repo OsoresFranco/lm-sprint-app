@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Tasks } from 'src/app/modules/core/models/Tasks';
+import { DialogFormComponent } from '../../components/dialog-form/dialog-form.component';
 
 @Component({
 	selector: 'app-my-tasks',
@@ -7,31 +9,12 @@ import { Tasks } from 'src/app/modules/core/models/Tasks';
 	styleUrls: ['./my-tasks.component.scss'],
 })
 export class MyTasksComponent implements OnInit {
+	tasks: Tasks[] = [];
+	constructor(public dialog: MatDialog) {}
 
-
-	tasks: Tasks[] = [{
-		done: false,
-		_id: '6253533cbaab600016e96399',
-		id: 1,
-		name: 'Task 1',
-		description: 'This is task #1',
-		story: '620192ba5d34515ecc3adafa',
-		created: '2022-04-10T21:59:24.063Z',
-		due: '2022-02-07T21:44:50.568Z',
-		__v: 0,
-	},
-	{
-		done: false,
-		_id: '6253533cbaab600016e96399',
-		id: 1,
-		name: 'Task 2',
-		description: 'This is task #1',
-		story: '620192ba5d34515ecc3adafa',
-		created: '2022-04-10T21:59:24.063Z',
-		due: '2022-02-07T21:44:50.568Z',
-		__v: 0,
-	}]
-	constructor() {}
+	openDialog() {
+		this.dialog.open(DialogFormComponent);
+	}
 
 	ngOnInit(): void {}
 }

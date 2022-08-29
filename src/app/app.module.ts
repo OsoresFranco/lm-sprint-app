@@ -1,6 +1,7 @@
 import { registerLocaleData } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import localeEsAr from '@angular/common/locales/es-AR';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +22,7 @@ registerLocaleData(localeEsAr, 'es-AR');
 		BrowserAnimationsModule,
 		HttpClientModule,
 		MaterialModule,
+		ReactiveFormsModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,

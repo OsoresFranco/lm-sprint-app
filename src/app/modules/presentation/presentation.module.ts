@@ -2,6 +2,7 @@ import { MaterialModule } from './../material/material.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CoreModule } from '../core/core.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LabelComponent } from './components/label/label.component';
@@ -18,6 +19,7 @@ import { MyUserStoriesComponent } from './routes/my-user-stories/my-user-stories
 import { UserStoriesCardComponent } from './components/user-stories-card/user-stories-card.component';
 import { MyTasksComponent } from './routes/my-tasks/my-tasks.component';
 import { TaskCardComponent } from './components/task-card/task-card.component';
+import { DialogFormComponent } from './components/dialog-form/dialog-form.component';
 
 @NgModule({
 	declarations: [
@@ -34,14 +36,16 @@ import { TaskCardComponent } from './components/task-card/task-card.component';
 		MyUserStoriesComponent,
 		UserStoriesCardComponent,
 		MyTasksComponent,
-		TaskCardComponent
+		TaskCardComponent,
+		DialogFormComponent,
 	],
 	imports: [
 		CommonModule,
 		FlexLayoutModule,
 		MaterialModule,
 		RouterModule,
-		CoreModule
+		ReactiveFormsModule,
+		CoreModule,
 	],
 	exports: [FlexLayoutModule, NavbarComponent, ProgressSpinnerComponent],
 })

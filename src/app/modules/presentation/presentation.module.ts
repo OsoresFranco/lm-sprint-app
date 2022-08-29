@@ -12,6 +12,7 @@ import { UserProfileFooterComponent } from './components/user-profile-footer/use
 import { MyProjectsComponent } from './routes/my-projects/my-projects.component';
 import { CardDialogComponent } from './components/card-dialog/card-dialog.component';
 import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
+import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
 
 @NgModule({
 	declarations: [
@@ -24,6 +25,7 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
 		MyProjectsComponent,
 		CardDialogComponent,
 		ProgressSpinnerComponent,
+		MyEpicsComponent,
 	],
 	imports: [CommonModule, FlexLayoutModule, MaterialModule, RouterModule],
 	exports: [FlexLayoutModule, NavbarComponent, ProgressSpinnerComponent],

@@ -43,7 +43,9 @@ export class CardComponent implements OnInit {
 		if (card.members) {
 			this.router.navigate(['/my-projects', card.id]);
 		} else {
-			this.router.navigate(['../my-epics', card.id], {relativeTo: this.route});
+			this.router.navigate(['/my-epics', card.id], {
+				relativeTo: this.route,
+			});
 		}
 	}
 

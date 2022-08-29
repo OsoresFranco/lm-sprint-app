@@ -12,6 +12,6 @@
 
 <ng-template #content>
 	<div class="epic-card" *ngFor="let card of epics">
-		<app-card cardType="epic" [card]="card"> </app-card>
+		<app-card [relativeUrl]="url" cardType="epic" [card]="card"> </app-card>
 	</div>
 </ng-template>

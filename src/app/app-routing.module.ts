@@ -8,7 +8,7 @@ import { MyProjectsComponent } from './modules/presentation/routes/my-projects/m
 const routes: Routes = [
 	{ path: 'home', component: HomeComponent },
 	{ path: 'my-projects', component: MyProjectsComponent },
-	{ path: 'my-projects/:id', component: MyEpicsComponent },
+	{ path: 'my-projects/:id', component: MyEpicsComponent, },
 	{ path: 'my-epics/:id', component: UserStoriesComponent },
 ];
 

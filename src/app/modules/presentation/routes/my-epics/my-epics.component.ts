@@ -8,10 +8,12 @@ import { Epics } from 'src/app/modules/core/models/Epics';
 	styleUrls: ['./my-epics.component.scss'],
 })
 export class MyEpicsComponent implements OnInit {
+	url: string;
 	constructor(private route: ActivatedRoute) {}
 
 	ngOnInit(): void {
-		console.log(this.route.snapshot.url.join('/'));
+		this.url = this.route.snapshot.url.join('/');
+		console.log(this.route.snapshot.url.join('/'))
 	}
 
 	title: string = 'Epics';

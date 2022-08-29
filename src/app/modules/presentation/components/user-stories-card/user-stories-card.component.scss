@@ -1,0 +1,36 @@
+@import "../../../../../assets/styles/theme.scss";
+
+:host {
+	--lm-card-header-title-color: var(--lm-black-color);
+	--lm-card-mini-fab-button: var(--lm-accent);
+}
+
+.card__container {
+	width: 100%;
+	min-width: 310px;
+	min-height: 125px;
+	max-width: 300px;
+	margin-top: 25px;
+	height: auto;
+}
+
+.card__content {
+	margin: 0px;
+}
+
+.card__actions-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.card__actions-button {
+	margin-bottom: 10px;
+}
+
+.card__header-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color: var(--lm-card-header-title-color);
+}

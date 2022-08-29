@@ -1,0 +1,19 @@
+<mat-card class="card__container">
+	<mat-card-title class="card__header-container">
+		{{ userStory.name }}
+	</mat-card-title>
+	<mat-card-subtitle>
+		Created: {{ userStory.created | date }}
+		Status: {{ userStory.status | date }}
+	</mat-card-subtitle>
+	<div>{{ userStory.description }}</div>
+	<mat-card-actions class="card__actions-container">
+		<button
+			class="card__actions-button"
+			mat-mini-fab
+			aria-label="button with a aspect_ratio icon"
+		>
+			<mat-icon>aspect_ratio</mat-icon>
+		</button>
+	</mat-card-actions>
+</mat-card>

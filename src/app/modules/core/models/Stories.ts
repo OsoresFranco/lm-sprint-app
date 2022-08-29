@@ -1,5 +1,5 @@
 export interface Stories {
-	assignedTo: [];
+	assignedTo: string[];
 	points: number;
 	status: string;
 	_id: string;

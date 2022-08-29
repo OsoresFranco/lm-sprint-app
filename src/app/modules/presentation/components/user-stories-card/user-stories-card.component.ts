@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Epics } from 'src/app/modules/core/models/Epics';
 import { Projects } from 'src/app/modules/core/models/Projects';
+import { Stories } from 'src/app/modules/core/models/Stories';
 import { CardDialogComponent } from '../card-dialog/card-dialog.component';
 
 const cardType = {
@@ -11,11 +12,11 @@ const cardType = {
 };
 
 @Component({
-	selector: 'app-card',
-	templateUrl: './card.component.html',
-	styleUrls: ['./card.component.scss'],
+	selector: 'app-user-stories-card',
+	templateUrl: './user-stories-card.component.html',
+	styleUrls: ['./user-stories-card.component.scss'],
 })
-export class CardComponent implements OnInit {
+export class UserStoriesCardComponent implements OnInit {
 	constructor(
 		public dialog: MatDialog,
 		private router: Router,
@@ -38,15 +39,21 @@ export class CardComponent implements OnInit {
 		});
 	}
 
-	navigateTo(card: any) {
-		if (card.members) {
-			this.router.navigate(['/my-projects', card.id]);
-		} else {
-			this.router.navigate(['/my-epics', card.id], {
-				relativeTo: this.route,
-			});
-		}
-	}
+	navigateTo(card: any) {}
 
 	ngOnInit(): void {}
+
+	userStory: Stories = {
+		assignedTo: ['6261aa79e81ff6207410e690'],
+		points: 4,
+		status: 'todo',
+		_id: '620192ba5d34515ecc3adafa',
+		id: 45,
+		name: 'string',
+		description: 'string',
+		epic: '62017253df85e917808d11f0',
+		created: '2022-02-07T21:44:26.346Z',
+		owner: 'No sé',
+		__v: 456,
+	};
 }

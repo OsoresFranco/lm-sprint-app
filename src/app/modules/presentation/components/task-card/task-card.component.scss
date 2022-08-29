@@ -4,6 +4,10 @@
 	--lm-card-header--title: var(--lm-black-color);
 }
 
+.card__container{
+	min-width: 250px;
+}
+
 .card__header-container {
 	display: flex;
 	align-items: center;

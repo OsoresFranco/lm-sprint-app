@@ -8,51 +8,15 @@ import { Epics } from 'src/app/modules/core/models/Epics';
 	styleUrls: ['./my-epics.component.scss'],
 })
 export class MyEpicsComponent implements OnInit {
-	url: string;
+	urlId: string;
 	constructor(private route: ActivatedRoute) {}
 
 	ngOnInit(): void {
-		this.url = this.route.snapshot.url.join('/');
+		this.urlId = this.route.snapshot.params.id;
+		
 	}
 
 	title: string = 'Epics';
 
-	epics: Epics[] = [
-		{
-			_id: '1',
-			id: 1,
-			project: 'Este es mi proyecto',
-			name: 'Esta es una epica',
-			description: 'Esta es una epica con un parrafo bastante largo',
-			icon: '🏖',
-			__v: 14,
-		},
-		{
-			_id: '1',
-			id: 2,
-			project: 'string',
-			name: 'string',
-			description: 'string',
-			icon: '🏖',
-			__v: 14,
-		},
-		{
-			_id: '1',
-			id: 3,
-			project: 'string',
-			name: 'string',
-			description: 'string',
-			icon: 'string',
-			__v: 14,
-		},
-		{
-			_id: '1',
-			id: 4,
-			project: 'string',
-			name: 'string',
-			description: 'string',
-			icon: 'string',
-			__v: 14,
-		},
-	];
+	epics: Epics[] = [];
 }

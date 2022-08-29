@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/modules/api-rest/services/project.service';
 import { Projects } from 'src/app/modules/core/models/Projects';
 
 @Component({
@@ -7,51 +8,19 @@ import { Projects } from 'src/app/modules/core/models/Projects';
 	styleUrls: ['./my-projects.component.scss'],
 })
 export class MyProjectsComponent implements OnInit {
-	title:string = 'My Projects'
-	cards: Projects[] = [
-		{
-			members: [],
-			_id: 'hasuid767a8sd6a',
-			id: 12,
-			name: 'App Aeronautica 1',
-			description:
-				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
-			icon: '🌎',
-			__v: 14,
-		},
-		{
-			members: [],
-			_id: 'hasuid767a8sd6a',
-			id: 13,
-			name: 'App Aeronautica 2',
-			description:
-				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
-			icon: '🌎',
-			__v: 14,
-		},
-		{
-			members: [],
-			_id: 'hasuid767a8sd6a',
-			id: 14,
-			name: 'App Aeronautica 3',
-			description:
-				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
-			icon: '🌎',
-			__v: 14,
-		},
-		{
-			members: [],
-			_id: 'hasuid767a8sd6a',
-			id: 15,
-			name: 'A 4',
-			description:
-				'App de rastreo aeronautico para el gobierno de la ciudad de Buenos Aires',
-			icon: '🌎',
-			__v: 14,
-		},
-	];
+	title: string = 'My Projects';
+	cards: Projects[] = [];
 
-	constructor() {}
+	constructor(private projectService: ProjectService) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.projectService.projects().subscribe({
+			next: (response) => {
+				this.cards = response.data;
+			},
+			error: (error) => {
+				alert('There was an error on the connection! ' + error.message);
+			},
+		});
+	}
 }

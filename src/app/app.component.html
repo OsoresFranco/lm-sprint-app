@@ -1,4 +1,8 @@
 <app-navbar [_title]="sectionTitle">
+	<app-progress-spinner
+		[loading]="isLoaded"
+		[httploading]="ishttpLoaded"
+	></app-progress-spinner>
 	<router-outlet
 		(activate)="subscribeToEmitter($event.title)"
 	></router-outlet>

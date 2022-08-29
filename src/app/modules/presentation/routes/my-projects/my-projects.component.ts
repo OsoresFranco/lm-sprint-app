@@ -7,6 +7,7 @@ import { Projects } from 'src/app/modules/core/models/Projects';
 	styleUrls: ['./my-projects.component.scss'],
 })
 export class MyProjectsComponent implements OnInit {
+	title:string = 'My Projects'
 	cards: Projects[] = [
 		{
 			members: [],

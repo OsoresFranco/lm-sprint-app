@@ -28,7 +28,7 @@ export class MyUserStoriesComponent implements OnInit {
       points: 4,
       status: 'todo',
       _id: '620192ba5d34515ecc3adafa',
-      id: 45,
+      id: 46,
       name: 'Crear pagina landing 2',
       description:
         'Esta es la descripcion de la user story esta, pero debe ser muy larga y por eso se va a mas de dos lineas',
@@ -42,7 +42,7 @@ export class MyUserStoriesComponent implements OnInit {
       points: 4,
       status: 'todo',
       _id: '620192ba5d34515ecc3adafa',
-      id: 45,
+      id: 47,
       name: 'Crear pagina landing 3',
       description:
         'Esta es la descripcion de la user story esta, pero debe ser muy larga y por eso se va a mas de dos lineas',
@@ -56,7 +56,7 @@ export class MyUserStoriesComponent implements OnInit {
       points: 4,
       status: 'todo',
       _id: '620192ba5d34515ecc3adafa',
-      id: 45,
+      id: 48,
       name: 'Crear pagina landing 4',
       description:
         'Esta es la descripcion de la user story esta, pero debe ser muy larga y por eso se va a mas de dos lineas',

@@ -1,0 +1,24 @@
+<mat-card class="card__container">
+	<mat-card-title class="card__header-container">
+        <input type="checkbox" (change)="check()" >
+		<div class="card__task-name" [ngClass]="{'card__task-name--checked' : isChecked}">
+			{{ task.name }}
+		</div>
+	</mat-card-title>
+	<mat-card-subtitle>
+		Created: {{ task.created | date }} | Due Date:
+		{{ task.due | date }}
+	</mat-card-subtitle>
+	<div>
+		{{ task.description }}
+	</div>
+    <mat-card-actions class="card__actions-container">
+		<button
+			class="card__actions-button"
+			mat-mini-fab
+			aria-label="button with a trash icon"
+		>
+			<mat-icon>delete_forever</mat-icon>
+		</button>
+	</mat-card-actions>
+</mat-card>

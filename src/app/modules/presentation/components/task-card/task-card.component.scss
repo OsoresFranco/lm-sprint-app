@@ -1,0 +1,29 @@
+@import "../../../../../assets/styles/theme.scss";
+
+:host {
+	--lm-card-header--title: var(--lm-black-color);
+}
+
+.card__header-container {
+	display: flex;
+	align-items: center;
+}
+
+.card__task-name {
+	margin: 5px 5px;
+}
+
+.card__task-name {
+	color: var(--lm-card-header--title);
+	&--checked {
+		text-decoration: line-through;
+	}
+}
+
+.card__actions-container{
+	display: flex;
+	justify-content: flex-end;
+	button{
+		background-color: crimson;
+	}
+}

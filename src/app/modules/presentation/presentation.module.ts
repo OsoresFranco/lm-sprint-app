@@ -16,6 +16,8 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
 import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
 import { MyUserStoriesComponent } from './routes/my-user-stories/my-user-stories.component';
 import { UserStoriesCardComponent } from './components/user-stories-card/user-stories-card.component';
+import { MyTasksComponent } from './routes/my-tasks/my-tasks.component';
+import { TaskCardComponent } from './components/task-card/task-card.component';
 
 @NgModule({
 	declarations: [
@@ -30,7 +32,9 @@ import { UserStoriesCardComponent } from './components/user-stories-card/user-st
 		ProgressSpinnerComponent,
 		MyEpicsComponent,
 		MyUserStoriesComponent,
-		UserStoriesCardComponent
+		UserStoriesCardComponent,
+		MyTasksComponent,
+		TaskCardComponent
 	],
 	imports: [
 		CommonModule,

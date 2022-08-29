@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 	name: 'status',
 })
 export class StatusPipe implements PipeTransform {
-	transform(value: string): unknown {
+	transform(value: string | boolean): unknown {
 		if (value === 'todo') {
 			return 'Pending';
 		} else {

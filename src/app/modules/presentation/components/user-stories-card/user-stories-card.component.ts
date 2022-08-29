@@ -27,7 +27,9 @@ export class UserStoriesCardComponent implements OnInit {
 		});
 	}
 
-	navigateTo(card: any) {}
+	navigateTo(card: any) {
+		this.router.navigate(['/my-tasks', card.id]);
+	}
 
 	ngOnInit(): void {}
 }

@@ -4,14 +4,19 @@
 	</mat-card-title>
 	<mat-card-subtitle>
 		<div>Created: {{ userStory.created | date }}</div>
-		<div>Status: {{ userStory.status | status }} | Points Value: {{userStory.points}}</div>
+		<div>
+			Status: {{ userStory.status | status }} | Points Value:
+			{{ userStory.points }}
+		</div>
 	</mat-card-subtitle>
 	<div>{{ userStory.description }}</div>
 	<mat-card-actions class="card__actions-container">
 		<button
+			(click)="navigateTo(userStory)"
 			class="card__actions-button"
 			mat-mini-fab
-			aria-label="button with a aspect_ratio icon">
+			aria-label="button with a aspect_ratio icon"
+		>
 			<mat-icon>aspect_ratio</mat-icon>
 		</button>
 	</mat-card-actions>

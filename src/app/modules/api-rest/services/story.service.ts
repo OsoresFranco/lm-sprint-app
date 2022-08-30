@@ -19,4 +19,8 @@ export class StoryService {
 	stories(id: number): Observable<any> {
 		return this.http.get(this.url + 'epics/' + id + '/stories', this.requestOptions);
 	}
+
+	storyById(id: number): Observable<any> {
+		return this.http.get(this.url + 'stories/' + id, this.requestOptions);
+	}
 }

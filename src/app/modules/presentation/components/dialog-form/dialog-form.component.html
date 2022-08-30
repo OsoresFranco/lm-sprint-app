@@ -33,7 +33,7 @@
 	</form>
 </mat-dialog-content>
 <mat-dialog-actions class="dialog-form__actions-container">
-	<button class="dialog-form__button dialog-form__button--submit" mat-raised-button [disabled]="form.invalid" (click)="test()">
+	<button class="dialog-form__button dialog-form__button--submit" mat-raised-button mat-dialog-close [disabled]="form.invalid" (click)="submit()">
 		Submit
 	</button>
 	<button class="dialog-form__button dialog-form__button--cancel" mat-raised-button mat-dialog-close>Cancel</button>

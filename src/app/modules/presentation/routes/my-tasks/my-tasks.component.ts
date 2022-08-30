@@ -24,7 +24,11 @@ export class MyTasksComponent implements OnInit, OnDestroy {
 	) {}
 
 	openDialog() {
-		this.dialog.open(DialogFormComponent);
+		this.dialog.open(DialogFormComponent, {
+			data: {
+				epicId: this.urlId,
+			},
+		});
 	}
 
 	deleteTask(event: Tasks) {

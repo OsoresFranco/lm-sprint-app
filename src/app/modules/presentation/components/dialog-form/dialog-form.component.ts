@@ -6,7 +6,6 @@ import {
 	Validators,
 } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
 import { StoryService } from 'src/app/modules/api-rest/services/story.service';
 import { TaskService } from 'src/app/modules/api-rest/services/task.service';
 

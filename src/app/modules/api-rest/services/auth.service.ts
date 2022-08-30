@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-
 @Injectable({
 	providedIn: 'root',
 })
@@ -16,7 +15,7 @@ export class AuthService {
 		return this.http.post<Users>(this.apiUrl + 'login', user);
 	}
 
-	test(){
-		
+	logout(): void {
+		localStorage.removeItem('auth');
 	}
 }

@@ -20,10 +20,10 @@ export class LoginComponent implements OnInit {
 	}
 
 	loginSubmit() {
-		console.log(this.login.value);
 		this.auth.login(this.login.value).subscribe({
 			next: (response) => {
-				console.log(response);
+				localStorage.setItem('auth', response.token);
+				localStorage.setItem('id', response.user._id);
 			},
 		});
 	}

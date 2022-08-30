@@ -2,11 +2,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Users } from '../../core/models/Users';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
-export class StoryService {
+export class UsersService {
+	apiUrl: string = environment.apiUrl;
+
 	private headers = new HttpHeaders({
 		auth: localStorage.getItem('auth'),
 	});
@@ -14,13 +17,11 @@ export class StoryService {
 	private requestOptions = { headers: this.headers };
 
 	constructor(private http: HttpClient) {}
-	private url: string = environment.apiUrl;
-	
-	stories(id: number): Observable<any> {
-		return this.http.get(this.url + 'epics/' + id + '/stories', this.requestOptions);
-	}
 
-	storyById(id: number): Observable<any> {
-		return this.http.get(this.url + 'stories/' + id, this.requestOptions);
+	getUser(_id: string): Observable<Users> {
+		return this.http.get<Users>(
+			this.apiUrl + 'users/' + _id,
+			this.requestOptions
+		);
 	}
 }

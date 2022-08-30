@@ -1,6 +1,6 @@
 <mat-card class="card__container">
 	<mat-card-title class="card__header-container">
-		<input type="checkbox" (change)="check()" />
+		<input type="checkbox" (change)="check(task)" [checked]="false" />
 		<div
 			class="card__task-name"
 			[ngClass]="{ 'card__task-name--checked': isChecked }"
@@ -11,16 +11,15 @@
 	<mat-card-subtitle>
 		Created: {{ task.created | date }}
 		<ng-container *ngIf="task.due"
-			>| Due Date:{{ task.due | date }}</ng-container
+			>| Due Date: {{ task.due | date }}</ng-container
 		>
-		{{ task.due | date }}
 	</mat-card-subtitle>
 	<div>
 		{{ task.description }}
 	</div>
 	<mat-card-actions class="card__actions-container">
 		<button
-		(click)="deleteEmit(task)"
+			(click)="deleteEmit(task)"
 			class="card__actions-button"
 			mat-mini-fab
 			aria-label="button with a trash icon"

@@ -9,6 +9,8 @@ import { Epics } from 'src/app/modules/core/models/Epics';
 	styleUrls: ['./my-epics.component.scss'],
 })
 export class MyEpicsComponent implements OnInit {
+	title: string = 'Epics';
+	epics: Epics[] = [];
 	urlId: number;
 	constructor(
 		private route: ActivatedRoute,
@@ -28,8 +30,4 @@ export class MyEpicsComponent implements OnInit {
 			},
 		});
 	}
-
-	title: string = 'Epics';
-
-	epics: Epics[] = [];
 }

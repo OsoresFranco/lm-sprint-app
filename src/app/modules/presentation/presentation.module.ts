@@ -21,6 +21,7 @@ import { UserStoriesCardComponent } from './components/user-stories-card/user-st
 import { MyTasksComponent } from './routes/my-tasks/my-tasks.component';
 import { TaskCardComponent } from './components/task-card/task-card.component';
 import { DialogFormComponent } from './components/dialog-form/dialog-form.component';
+import { LoginComponent } from './routes/login/login.component';
 
 @NgModule({
 	declarations: [
@@ -39,6 +40,7 @@ import { DialogFormComponent } from './components/dialog-form/dialog-form.compon
 		MyTasksComponent,
 		TaskCardComponent,
 		DialogFormComponent,
+		LoginComponent,
 	],
 	imports: [
 		CommonModule,

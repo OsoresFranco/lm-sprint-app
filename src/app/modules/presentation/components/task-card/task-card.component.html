@@ -3,11 +3,11 @@
 		<input
 			type="checkbox"
 			(change)="check(task)"
-			[checked]="isChecked"
+			[checked]="checked"
 		/>
 		<div
 			class="card__task-name"
-			[ngClass]="{ 'card__task-name--checked': isChecked }"
+			[ngClass]="{ 'card__task-name--checked': checked }"
 		>
 			{{ task.name }}
 		</div>

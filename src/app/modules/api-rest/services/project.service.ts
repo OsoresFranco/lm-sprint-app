@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProjectService {
 	headers = new HttpHeaders({
-		auth: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOnsiZmlyc3QiOiJXYWx0ZXIiLCJsYXN0IjoiTW9saW5hIn0sIl9pZCI6IjYyMDE0Y2RhNGM2NGEzNGNjODg4MWJmZCIsImlkIjoxLCJlbWFpbCI6IndhbHRlcm1vbGluYUBtc24uY29tIiwidXNlcm5hbWUiOiJ3YWx0ZXJtb2xpbmEiLCJfX3YiOjB9LCJpYXQiOjE2NjE3OTc4NDUsImV4cCI6MTY2MTg4NDI0NX0.JoWb6RZ-URWvAXVZVExgSz-1pZM99RJ4XzCbPmsmkBs',
+		auth: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOnsiZmlyc3QiOiJXYWx0ZXIiLCJsYXN0IjoiTW9saW5hIn0sIl9pZCI6IjYyMDE0Y2RhNGM2NGEzNGNjODg4MWJmZCIsImlkIjoxLCJlbWFpbCI6IndhbHRlcm1vbGluYUBtc24uY29tIiwidXNlcm5hbWUiOiJ3YWx0ZXJtb2xpbmEiLCJfX3YiOjB9LCJpYXQiOjE2NjE4ODE2NTAsImV4cCI6MTY2MTk2ODA1MH0.0d9nQgategfEfgcQbPb20Dskoym5w6iUSgb3E06IP8s',
 	});
 
 	requestOptions = { headers: this.headers };

@@ -1,5 +1,6 @@
 import { MaterialModule } from './../material/material.module';
 import { RouterModule } from '@angular/router';
+import { PresentationRoutingModule } from './presentation-routing.module';
 import { CommonModule } from '@angular/common';
 import { CoreModule } from '../core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -46,7 +47,8 @@ import { DialogFormComponent } from './components/dialog-form/dialog-form.compon
 		RouterModule,
 		ReactiveFormsModule,
 		CoreModule,
+		PresentationRoutingModule,
 	],
-	exports: [FlexLayoutModule, NavbarComponent, ProgressSpinnerComponent],
+	exports: [FlexLayoutModule],
 })
 export class PresentationModule {}

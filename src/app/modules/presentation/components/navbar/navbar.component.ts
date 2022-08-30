@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 	selector: 'app-navbar',
@@ -11,17 +11,13 @@ export class NavbarComponent implements OnInit {
 	@Input() _title: string = 'Section Title';
 
 	links = [
-		{ link: 'home', text: 'Home' },
+		{ link: '', text: 'Home' },
 		{ link: 'my-projects', text: 'My Projects' },
 		{ link: 'mystories', text: 'My Stories' },
 		{ link: 'settings', text: 'Settings' },
 	];
 
-	constructor(private router: Router) {}
-
-	test(valor: string): void {
-		this.router.navigate([`${valor}`]);
-	}
+	constructor(private router: Router, public route: ActivatedRoute) {}
 
 	ngOnInit(): void {}
 }

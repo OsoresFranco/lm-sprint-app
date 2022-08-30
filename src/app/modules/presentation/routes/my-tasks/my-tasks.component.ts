@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 	styleUrls: ['./my-tasks.component.scss'],
 })
 export class MyTasksComponent implements OnInit, OnDestroy {
+	title = 'My Tasks'
 	subscription: Subscription;
 	urlId: number;
 	tasks: Tasks[] = [];

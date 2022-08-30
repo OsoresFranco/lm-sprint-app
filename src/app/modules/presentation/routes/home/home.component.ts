@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title:string = 'Home'
+	isLoaded: boolean = false;
+	ishttpLoaded: boolean = false;
 
-  constructor() { }
+	sectionTitle: string = '';
 
-  ngOnInit(): void {
-  }
+	subscribeToEmitter(event: string) {
+		this.sectionTitle = event;
+	}
 
+	currentYear = new Date().getFullYear();
+
+	constructor(private route: Router) {}
+
+	ngOnInit() {
+		this.route.events.subscribe(
+			(event) => {
+				if (event instanceof NavigationStart) {
+					this.isLoaded = true;
+				} else if (event instanceof NavigationEnd) {
+					this.isLoaded = false;
+				}
+			},
+			(error) => {
+				this.isLoaded = false;
+				console.log(error);
+			}
+		);
+	}
 }

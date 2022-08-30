@@ -9,16 +9,16 @@ import { Tasks } from 'src/app/modules/core/models/Tasks';
 })
 export class TaskCardComponent implements OnInit {
 	@Output() delete = new EventEmitter();
-	checked: boolean = false;
+	checked: boolean;
 
 	@Input() task: Tasks;
 	isChecked: boolean;
 
 	check(task: Tasks) {
-		this.isChecked = !this.isChecked;
+		this.checked = !this.checked;
 		task = {
 			...task,
-			done: !this.checked,
+			done: this.checked,
 		};
 		this.taskService.taskEdit(task).subscribe({
 			next: (response) => {
@@ -37,6 +37,8 @@ export class TaskCardComponent implements OnInit {
 		if (this.task.done === true) {
 			this.isChecked = true;
 			this.checked = true;
+		} else {
+			this.isChecked = false;
 		}
 	}
 }

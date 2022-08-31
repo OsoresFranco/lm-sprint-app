@@ -22,6 +22,7 @@ import { MyTasksComponent } from './routes/my-tasks/my-tasks.component';
 import { TaskCardComponent } from './components/task-card/task-card.component';
 import { DialogFormComponent } from './components/dialog-form/dialog-form.component';
 import { LoginComponent } from './routes/login/login.component';
+import { SettingsComponent } from './routes/settings/settings.component';
 
 @NgModule({
 	declarations: [
@@ -41,6 +42,7 @@ import { LoginComponent } from './routes/login/login.component';
 		TaskCardComponent,
 		DialogFormComponent,
 		LoginComponent,
+		SettingsComponent,
 	],
 	imports: [
 		CommonModule,

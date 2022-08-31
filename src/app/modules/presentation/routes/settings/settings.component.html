@@ -1,0 +1,26 @@
+<div class="settings__container">
+	<div class="settings__picture-container">
+		<img
+			class="settings__picture"
+			src="../../../../../assets/images/profile.png"
+			alt="profile picture"
+		/>
+	</div>
+	<div class="settings__user-info-container" *ngIf="user">
+		<div class="settings-user-info-item--title">Name</div>
+		<div class="settings-user-info-item">
+			{{ user.name.first }} {{ user.name.last }}
+		</div>
+		<div class="settings-user-info-item--title">Email</div>
+		<div class="settings-user-info-item">{{ user.email }}</div>
+	</div>
+	<div class="settings__actions-container">
+		<button
+			class="settings__actions-button"
+			mat-raised-button
+			(click)="logout()"
+		>
+			Logout
+		</button>
+	</div>
+</div>

@@ -11,9 +11,8 @@ export class NavbarComponent implements OnInit {
 	@Input() _title: string = 'Section Title';
 
 	links = [
-		{ link: '', text: 'Home' },
 		{ link: 'my-projects', text: 'My Projects' },
-		{ link: 'mystories', text: 'My Stories' },
+		{ link: 'my-stories', text: 'My Stories' },
 		{ link: 'settings', text: 'Settings' },
 	];
 

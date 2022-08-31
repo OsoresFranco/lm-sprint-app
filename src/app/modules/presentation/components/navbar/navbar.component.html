@@ -6,12 +6,13 @@
 		mode="over"
 	>
 		<div class="lm-navbar__drawer-content">
-			<img
-				class="lm-navbar__drawer-image"
-				src="../../../../../assets/images/logolmapp.png"
-				alt="Logo ProManager"
-			/>
-
+			<a routerLink="" (click)="drawer.toggle()">
+				<img
+					class="lm-navbar__drawer-image"
+					src="../../../../../assets/images/logolmapp.png"
+					alt="Logo ProManager"
+				/>
+			</a>
 			<!--                    Links for drawer                    -->
 			<div>
 				<a
@@ -48,11 +49,14 @@
 			</span>
 		</div>
 
-		<img
-			class="lm-navbar__isologo lm-navbar__item"
-			src="../../../../../assets/images/isologo.svg"
-			alt="Iso Logo ProManager"
-		/>
+		<a routerLink="">
+			<img
+				class="lm-navbar__isologo lm-navbar__item"
+				src="../../../../../assets/images/isologo.svg"
+				alt="Iso Logo ProManager"
+			/>
+		</a>
+
 		<div class="lm-navbar__links--desktop-view lm-navbar__item">
 			<!--                    Links for Bigger Screens                    -->
 			<a

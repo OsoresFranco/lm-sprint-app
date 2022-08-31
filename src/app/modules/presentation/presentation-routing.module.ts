@@ -17,6 +17,7 @@ const routes: Routes = [
 		children: [
 			{ path: 'my-projects', component: MyProjectsComponent },
 			{ path: 'my-projects/:id', component: MyEpicsComponent },
+			{ path: 'my-stories', component: MyUserStoriesComponent },
 			{ path: 'my-epics/:id', component: MyUserStoriesComponent },
 			{ path: 'my-tasks/:id', component: MyTasksComponent },
 			{ path: 'settings', component: SettingsComponent },

@@ -23,4 +23,8 @@ export class StoryService {
 	storyById(id: number): Observable<any> {
 		return this.http.get(this.url + 'stories/' + id, this.requestOptions);
 	}
+
+	allStories(): Observable<any> {
+		return this.http.get(this.url + 'stories/', this.requestOptions);
+	}
 }

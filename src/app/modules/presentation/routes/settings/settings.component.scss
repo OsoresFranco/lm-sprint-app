@@ -6,14 +6,24 @@
 	--lm-button-text: var(--lm-white-color);
 }
 
-.settings__picture {
-	margin-bottom: 25px;
+.settings__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.settings__picture-container {
+	padding: 20px;
 }
 
 .settings__picture {
-	max-width: 100%;
+	width: 100%;
+	max-width: 375px;
 	max-height: 80%;
 	box-shadow: 2px 2px #888888;
+	margin-bottom: 25px;
+	border-radius: 10px;
 }
 
 .settings__user-info-container {

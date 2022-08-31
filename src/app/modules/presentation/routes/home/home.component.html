@@ -3,3 +3,4 @@
 		(activate)="subscribeToEmitter($event.title)"
 	></router-outlet>
 </app-navbar>
+<mat-progress-spinner *ngIf="title" mode="indeterminate"></mat-progress-spinner>

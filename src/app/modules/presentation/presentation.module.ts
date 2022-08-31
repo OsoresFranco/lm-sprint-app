@@ -53,8 +53,8 @@ import { Page404Component } from './routes/page404/page404.component';
 		RouterModule,
 		ReactiveFormsModule,
 		CoreModule,
-		PresentationRoutingModule,
+		PresentationRoutingModule
 	],
-	exports: [FlexLayoutModule],
+	exports: [FlexLayoutModule]
 })
 export class PresentationModule {}

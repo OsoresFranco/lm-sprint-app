@@ -1,3 +1,5 @@
+@import "./assets/styles/theme.scss";
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
@@ -10,6 +12,25 @@ body {
 	background-color: whitesmoke;
 }
 
-h1{
+h1 {
 	margin-top: 0px;
+}
+
+simple-snack-bar span {
+	margin: auto;
+	text-align: center;
+}
+
+.warn-snackbar {
+	background: var(--lm-accent);
+	.mat-simple-snackbar-action {
+		color: white !important;
+	}
+}
+
+.success-snackbar {
+	background: var(--lm-primary);
+	.mat-simple-snackbar-action {
+		color: white !important;
+	}
 }

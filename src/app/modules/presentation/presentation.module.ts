@@ -50,7 +50,7 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
 		Page404Component,
 		BackIconComponent,
 		SprintInfoComponent,
-		ProgressSpinnerComponent
+		ProgressSpinnerComponent,
 	],
 	imports: [
 		CommonModule,

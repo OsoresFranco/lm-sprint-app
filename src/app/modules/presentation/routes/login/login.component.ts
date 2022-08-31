@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/modules/api-rest/services/auth.service';
+import { SnackbarService } from 'src/app/modules/core/services/snackbar.service';
 
 @Component({
 	selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
 	constructor(
 		private fb: FormBuilder,
 		private auth: AuthService,
-		private router: Router
+		private router: Router,
+		private snackbar: SnackbarService
 	) {}
 
 	usernameHasError() {
@@ -44,15 +46,26 @@ export class LoginComponent implements OnInit {
 	loginSubmit() {
 		this.auth.login(this.login.value).subscribe({
 			next: (response) => {
-				localStorage.setItem('auth', response.token);
-				localStorage.setItem('id', response.user._id);
+				console.log(response);
+				if (response.msg) {
+					this.snackbar.snackBarError(
+						'Username or Password is incorrect',
+						'Ok'
+					);
+				} else {
+					this.snackbar.snackBarSuccess(
+						'Welcome Back!',
+						'Ok'
+					);
+					localStorage.setItem('auth', response.token);
+					localStorage.setItem('id', response.user._id);
+					this.router.navigate(['']);
+				}
 			},
 			error: (response) => {
 				console.log(response);
 			},
-			complete: () => {
-				this.router.navigate(['']);
-			},
+			complete: () => {},
 		});
 	}
 }

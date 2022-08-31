@@ -1,10 +1,13 @@
+<h1 class="stories-card__title">{{ title }}</h1>
 <div class="stories-card__container">
 	<ng-container *ngIf="cards.length; else elseBlock">
 		<ng-container *ngTemplateOutlet="content"> </ng-container>
 	</ng-container>
 
 	<ng-template #elseBlock>
-		<h3 class="stories-card__content--empty">There are no projects assigned to you yet.</h3>
+		<h3 class="stories-card__content--empty">
+			There are no projects assigned to you yet.
+		</h3>
 	</ng-template>
 </div>
 

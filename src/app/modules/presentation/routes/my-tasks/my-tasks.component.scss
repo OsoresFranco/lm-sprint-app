@@ -5,11 +5,11 @@
 	--lm-add-button: var(--lm-primary);
 }
 
-.project-card {
+.task-card {
 	margin: 15px;
 }
 
-.project-card__container {
+.task-card__container {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -18,13 +18,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-	.project-card__container {
+	.task-card__container {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 }
 
-.project-card__content--empty {
+.task-card__content--empty {
 	font-weight: 600;
 	margin-top: 25px;
 	max-width: 50%;
@@ -46,4 +46,12 @@
 	button {
 		background-color: var(--lm-add-button);
 	}
+}
+
+.task-card__title {
+	font-weight: 600;
+	font-size: 24px;
+	color: var(--lm--my-projects-text);
+	padding-top: 10px;
+	text-align: center;
 }

@@ -9,21 +9,22 @@
 		<mat-icon>library_add</mat-icon>
 	</button>
 </div>
-
-<div class="project-card__container">
+<h1 class="task-card__title">{{ title }}</h1>
+<div class="task-card__container">
 	<ng-container *ngIf="tasks.length; else elseBlock">
 		<ng-container *ngTemplateOutlet="content"> </ng-container>
 	</ng-container>
 
 	<ng-template #elseBlock>
-		<h3 class="project-card__content--empty">
+		<h3 class="task-card__content--empty">
 			There are no tasks for this Epic yet
 		</h3>
 	</ng-template>
 </div>
 
 <ng-template #content>
-	<div class="project-card" *ngFor="let task of tasks">
-		<app-task-card (delete)="deleteTask($event)" [task]="task"> </app-task-card>
+	<div class="task-card" *ngFor="let task of tasks">
+		<app-task-card (delete)="deleteTask($event)" [task]="task">
+		</app-task-card>
 	</div>
 </ng-template>

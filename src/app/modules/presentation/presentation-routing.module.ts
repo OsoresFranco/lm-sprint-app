@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../core/guards/auth.guard';
 import { HomeComponent } from './routes/home/home.component';
 import { LoginComponent } from './routes/login/login.component';
 import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
@@ -11,6 +12,7 @@ import { SettingsComponent } from './routes/settings/settings.component';
 const routes: Routes = [
 	{
 		path: '',
+		canActivate: [AuthGuard],
 		component: HomeComponent,
 		children: [
 			{ path: 'my-projects', component: MyProjectsComponent },

@@ -19,4 +19,12 @@ export class AuthService {
 		localStorage.removeItem('auth');
 		localStorage.removeItem('id');
 	}
+
+	isLogued() {
+		if (localStorage.getItem('auth') && localStorage.getItem('id')) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

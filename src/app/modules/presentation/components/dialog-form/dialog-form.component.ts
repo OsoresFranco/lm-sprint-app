@@ -8,6 +8,7 @@ import {
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { StoryService } from 'src/app/modules/api-rest/services/story.service';
 import { TaskService } from 'src/app/modules/api-rest/services/task.service';
+import { SnackbarService } from 'src/app/modules/core/services/snackbar.service';
 
 @Component({
 	selector: 'app-dialog-form',
@@ -21,10 +22,13 @@ export class DialogFormComponent implements OnInit {
 
 	submit() {
 		this.taskService.taskPost(this.form.value).subscribe({
-			next: () => {},
+			next: () => {
+				this.snackbar.snackBarSuccess('Your task has been added', 'Ok');
+			},
 			error: (error) => {
-				console.log(
-					'There was an error with this request: ' + error.message
+				this.snackbar.snackBarError(
+					'There was an error while adding your task',
+					'Ok'
 				);
 			},
 		});
@@ -34,7 +38,8 @@ export class DialogFormComponent implements OnInit {
 		@Inject(MAT_DIALOG_DATA) public data,
 		private fb: FormBuilder,
 		private storyService: StoryService,
-		private taskService: TaskService
+		private taskService: TaskService,
+		private snackbar: SnackbarService
 	) {}
 
 	ngOnInit(): void {

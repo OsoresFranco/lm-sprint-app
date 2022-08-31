@@ -10,7 +10,7 @@ import { Users } from 'src/app/modules/core/models/Users';
 	styleUrls: ['./settings.component.scss'],
 })
 export class SettingsComponent implements OnInit {
-	title:string = 'Settings'
+	title: string = 'Settings';
 	user: Users;
 
 	constructor(
@@ -23,7 +23,6 @@ export class SettingsComponent implements OnInit {
 		let id = localStorage.getItem('id');
 		this.userService.getUser(id).subscribe({
 			next: (response) => {
-				console.log(response);
 				this.user = response;
 			},
 		});

@@ -1,0 +1,18 @@
+.back-icon__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+}
+
+a {
+	color: #ffffff;
+	:active {
+		text-decoration: none;
+		color: #ffffff;
+	}
+	:visited {
+		text-decoration: none;
+		color: #ffffff;
+	}
+}

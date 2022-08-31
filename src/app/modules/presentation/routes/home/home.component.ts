@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-	sectionTitle: string = '';
+	sectionTitle: string = 'Home';
+	title:string = 'Home'
 
 	subscribeToEmitter(event: string) {
 		this.sectionTitle = event;

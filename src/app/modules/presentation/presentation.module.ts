@@ -24,6 +24,7 @@ import { DialogFormComponent } from './components/dialog-form/dialog-form.compon
 import { LoginComponent } from './routes/login/login.component';
 import { SettingsComponent } from './routes/settings/settings.component';
 import { Page404Component } from './routes/page404/page404.component';
+import { BackIconComponent } from './components/back-icon/back-icon.component';
 
 @NgModule({
 	declarations: [
@@ -45,6 +46,7 @@ import { Page404Component } from './routes/page404/page404.component';
 		LoginComponent,
 		SettingsComponent,
 		Page404Component,
+		BackIconComponent,
 	],
 	imports: [
 		CommonModule,

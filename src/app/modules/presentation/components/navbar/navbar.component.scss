@@ -8,10 +8,12 @@
 	--lm-navbar--title: var(--lm-white-color);
 }
 .lm-navbar__title {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	color: var(--lm-navbar--title);
 	font-weight: 600;
 	font-size: 16px;
-	margin-left: 16px;
 }
 
 .lm-navbar__container {

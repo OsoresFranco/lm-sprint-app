@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../core/guards/auth.guard';
+import { SprintInfoComponent } from './components/sprint-info/sprint-info.component';
 import { HomeComponent } from './routes/home/home.component';
 import { LoginComponent } from './routes/login/login.component';
 import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
 			{ path: 'my-epics/:id', component: MyUserStoriesComponent },
 			{ path: 'my-tasks/:id', component: MyTasksComponent },
 			{ path: 'settings', component: SettingsComponent },
+			{ path: '', component: SprintInfoComponent },
 		],
 	},
 	{ path: 'login', component: LoginComponent },

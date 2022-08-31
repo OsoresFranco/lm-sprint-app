@@ -25,6 +25,7 @@ import { LoginComponent } from './routes/login/login.component';
 import { SettingsComponent } from './routes/settings/settings.component';
 import { Page404Component } from './routes/page404/page404.component';
 import { BackIconComponent } from './components/back-icon/back-icon.component';
+import { SprintInfoComponent } from './components/sprint-info/sprint-info.component';
 
 @NgModule({
 	declarations: [
@@ -47,6 +48,7 @@ import { BackIconComponent } from './components/back-icon/back-icon.component';
 		SettingsComponent,
 		Page404Component,
 		BackIconComponent,
+		SprintInfoComponent,
 	],
 	imports: [
 		CommonModule,

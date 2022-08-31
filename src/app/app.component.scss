@@ -6,3 +6,10 @@ mat-card {
 app-card {
 	margin: 0px;
 }
+
+mat-progress-spinner{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 20;
+}

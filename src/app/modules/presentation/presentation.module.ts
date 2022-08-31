@@ -14,7 +14,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserProfileFooterComponent } from './components/user-profile-footer/user-profile-footer.component';
 import { MyProjectsComponent } from './routes/my-projects/my-projects.component';
 import { CardDialogComponent } from './components/card-dialog/card-dialog.component';
-import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
 import { MyUserStoriesComponent } from './routes/my-user-stories/my-user-stories.component';
 import { UserStoriesCardComponent } from './components/user-stories-card/user-stories-card.component';
@@ -26,6 +25,9 @@ import { SettingsComponent } from './routes/settings/settings.component';
 import { Page404Component } from './routes/page404/page404.component';
 import { BackIconComponent } from './components/back-icon/back-icon.component';
 import { SprintInfoComponent } from './components/sprint-info/sprint-info.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NetworkInterceptor } from '../core/interceptors/network.interceptor';
+import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 
 @NgModule({
 	declarations: [
@@ -37,7 +39,6 @@ import { SprintInfoComponent } from './components/sprint-info/sprint-info.compon
 		UserProfileFooterComponent,
 		MyProjectsComponent,
 		CardDialogComponent,
-		ProgressSpinnerComponent,
 		MyEpicsComponent,
 		MyUserStoriesComponent,
 		UserStoriesCardComponent,
@@ -49,6 +50,7 @@ import { SprintInfoComponent } from './components/sprint-info/sprint-info.compon
 		Page404Component,
 		BackIconComponent,
 		SprintInfoComponent,
+		ProgressSpinnerComponent
 	],
 	imports: [
 		CommonModule,
@@ -57,8 +59,15 @@ import { SprintInfoComponent } from './components/sprint-info/sprint-info.compon
 		RouterModule,
 		ReactiveFormsModule,
 		CoreModule,
-		PresentationRoutingModule
+		PresentationRoutingModule,
 	],
-	exports: [FlexLayoutModule]
+	exports: [FlexLayoutModule],
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: NetworkInterceptor,
+			multi: true,
+		},
+	],
 })
 export class PresentationModule {}

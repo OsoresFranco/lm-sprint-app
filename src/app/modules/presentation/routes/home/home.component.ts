@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingService } from 'src/app/modules/core/services/loading.service';
 
 @Component({
 	selector: 'app-home',

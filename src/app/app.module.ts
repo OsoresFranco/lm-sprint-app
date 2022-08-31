@@ -15,8 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material/material.module';
 import { PresentationModule } from './modules/presentation/presentation.module';
-import { NetworkInterceptor } from './modules/core/interceptors/network.interceptor';
-
 registerLocaleData(localeEsAr, 'es-AR');
 
 @NgModule({

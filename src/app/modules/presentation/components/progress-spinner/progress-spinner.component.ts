@@ -1,4 +1,8 @@
-import { Component, Input, OnInit, SimpleChange, OnChanges } from '@angular/core';
+import {
+	Component,
+	OnInit,
+} from '@angular/core';
+import { LoadingService } from 'src/app/modules/core/services/loading.service';
 
 @Component({
 	selector: 'app-progress-spinner',
@@ -6,14 +10,9 @@ import { Component, Input, OnInit, SimpleChange, OnChanges } from '@angular/core
 	styleUrls: ['./progress-spinner.component.scss'],
 })
 export class ProgressSpinnerComponent implements OnInit {
-	@Input() loading: boolean = false;
-	@Input() httploading: boolean = false;
+	ngOnChanges() {}
 
-	ngOnChanges(changes: SimpleChange) {
-		console.log(changes); //logging the changes in @Input()
-	}
-
-	constructor() {}
+	constructor(public loadingService: LoadingService) {}
 
 	ngOnInit(): void {}
 }

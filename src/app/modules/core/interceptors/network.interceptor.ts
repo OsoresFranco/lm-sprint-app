@@ -11,16 +11,19 @@ import { finalize } from 'rxjs/operators';
 
 @Injectable()
 export class NetworkInterceptor implements HttpInterceptor {
-	constructor(private loader: LoadingService) {}
+	constructor(public loader: LoadingService) {}
 
 	intercept(
-		request: HttpRequest<unknown>,
+		req: HttpRequest<any>,
 		next: HttpHandler
-	): Observable<HttpEvent<unknown>> {
-		this.loader.show();
-		return next.handle(request).pipe(
+	): Observable<HttpEvent<any>> {
+		this.loader.isLoading.next(true);
+
+		return next.handle(req).pipe(
 			finalize(() => {
-				this.loader.hide();
+				setTimeout(() => {
+					this.loader.isLoading.next(false);
+				}, 100);
 			})
 		);
 	}

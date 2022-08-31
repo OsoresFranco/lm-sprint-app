@@ -17,6 +17,10 @@
 					formControlName="username"
 					placeholder="Username"
 				/>
+				<mat-error *ngIf="login.controls['username'].errors">{{
+					usernameHasError()
+				}}</mat-error>
+				<mat-error>{{ usernameError }}</mat-error>
 			</mat-form-field>
 			<mat-form-field appearance="fill" class="login__form-input">
 				<mat-label>Password</mat-label>
@@ -26,8 +30,17 @@
 					formControlName="password"
 					placeholder="Password"
 				/>
+				<mat-error *ngIf="login.controls['password'].errors">{{
+					passwordHasError()
+				}}</mat-error>
 			</mat-form-field>
-			<button mat-raised-button class="login__form-button" (click)="loginSubmit()">Login</button>
+			<button
+				mat-raised-button
+				class="login__form-button"
+				(click)="loginSubmit()"
+			>
+				Login
+			</button>
 		</form>
 	</div>
 </div>

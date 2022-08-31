@@ -7,6 +7,7 @@ import { MyEpicsComponent } from './routes/my-epics/my-epics.component';
 import { MyProjectsComponent } from './routes/my-projects/my-projects.component';
 import { MyTasksComponent } from './routes/my-tasks/my-tasks.component';
 import { MyUserStoriesComponent } from './routes/my-user-stories/my-user-stories.component';
+import { Page404Component } from './routes/page404/page404.component';
 import { SettingsComponent } from './routes/settings/settings.component';
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
 		],
 	},
 	{ path: 'login', component: LoginComponent },
+	{ path: '**', component: Page404Component },
 ];
 
 @NgModule({

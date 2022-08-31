@@ -23,6 +23,7 @@ import { TaskCardComponent } from './components/task-card/task-card.component';
 import { DialogFormComponent } from './components/dialog-form/dialog-form.component';
 import { LoginComponent } from './routes/login/login.component';
 import { SettingsComponent } from './routes/settings/settings.component';
+import { Page404Component } from './routes/page404/page404.component';
 
 @NgModule({
 	declarations: [
@@ -43,6 +44,7 @@ import { SettingsComponent } from './routes/settings/settings.component';
 		DialogFormComponent,
 		LoginComponent,
 		SettingsComponent,
+		Page404Component,
 	],
 	imports: [
 		CommonModule,
